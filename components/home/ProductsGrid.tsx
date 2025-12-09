@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Heart, Activity, Brain, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const products = [
   {
     id: "sonocube",
     title: "SonoCube",
-    icon: Heart,
+    logo: "/logos/sono_logo.png",
     color: "purple",
     subtitle: "2D Ultrasound, Reimagined in 3D",
     desc: "2D 심초음파만으로 3D 심장 구조를 재구성합니다.",
@@ -17,7 +18,7 @@ const products = [
   {
     id: "ventriculab",
     title: "VentricuLab",
-    icon: Activity,
+    logo: "/logos/ventri_logo.png",
     color: "blue",
     subtitle: "EF · Volumes · Scar in 30 Seconds",
     desc: "MRI 기반 자동 분할로 30초 내에 분석을 완료합니다.",
@@ -26,7 +27,7 @@ const products = [
   {
     id: "axissight",
     title: "AxisSight",
-    icon: Brain,
+    logo: "/logos/axis_logo.png",
     color: "teal",
     subtitle: "Your Spine, Quantified",
     desc: "X-ray 영상에서 Cobb 각을 자동으로 계산합니다.",
@@ -46,7 +47,6 @@ export default function ProductsGrid() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {products.map((product) => {
-            const Icon = product.icon;
             return (
               <motion.div
                 key={product.id}
@@ -56,24 +56,13 @@ export default function ProductsGrid() {
                 transition={{ duration: 0.6 }}
                 className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all group"
               >
-                <div
-                  className={`w-14 h-14 ${
-                    product.color === "purple"
-                      ? "bg-purple-100"
-                      : product.color === "blue"
-                      ? "bg-blue-100"
-                      : "bg-teal-100"
-                  } rounded-xl flex items-center justify-center mb-6`}
-                >
-                  <Icon
-                    size={28}
-                    className={
-                      product.color === "purple"
-                        ? "text-purple-600"
-                        : product.color === "blue"
-                        ? "text-blue-600"
-                        : "text-teal-600"
-                    }
+                <div className="mb-6 flex items-center justify-center">
+                  <Image
+                    src={product.logo}
+                    alt={`${product.title} 로고`}
+                    width={120}
+                    height={120}
+                    className="object-contain"
                   />
                 </div>
 

@@ -14,10 +14,10 @@ export default function CoreMessage() {
           className="text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            정확도보다 일관성, 논문보다 현장 활용.
+            정확하게, 일관되게, 그리고 실제로 사용되도록
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            MediX는 의사와 실제 사용자와 함께 제품을 만들고 검증합니다.
+            MediX는 연구·임상·현장을 잇는 실전형 AI를 개발합니다.
           </p>
         </motion.div>
       </div>

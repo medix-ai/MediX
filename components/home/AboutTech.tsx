@@ -21,8 +21,9 @@ export default function AboutTech() {
               Technology
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              MediX는 의사와 실제 사용자와 함께 제품을 만들고 검증합니다. 정확도보다
-              일관성, 논문보다 현장 활용을 최우선으로 합니다.
+            정확도(Accuracy), 일관성(Consistency), 실전 배포(Deployment). <br />
+            MediX는 이 세 요소가 균형을 이루어야 진짜 의미 있는 의료 AI가 된다고 믿습니다. <br />
+            그래서 우리는 연구실 성능과 임상적 신뢰성, 실제 사용성을 동시에 추구합니다. <br />
             </p>
             <Link
               href="/about"

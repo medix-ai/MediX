@@ -19,14 +19,12 @@ export default function CTA() {
           </div>
 
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            정확도보다 일관성,
-            <br />
-            논문보다 현장 활용
+           Research × Clinical × Real-world AI
           </h2>
 
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            MediX는 의사와 실제 사용자와 함께 제품을 만들고 검증합니다. PoC 문의, 연구
-            협업, 제품 데모를 경험해보세요.
+            MediX는 정확성과 일관성, 연구 검증과 현장 활용성을 함께 추구합니다. <br />
+            PoC 문의, 연구 협업, 제품 데모를 경험해보세요.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

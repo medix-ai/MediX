@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,8 +15,14 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-navy">MediX</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logos/medix_logo.png"
+              alt="MediX"
+              width={120}
+              height={40}
+              className="object-contain h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
