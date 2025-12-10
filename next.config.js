@@ -9,6 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // 정적 export에서는 API route 제외
+  excludeDefaultMomentLocales: true,
 };
 
 module.exports = nextConfig;

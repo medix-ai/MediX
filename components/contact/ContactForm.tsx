@@ -30,13 +30,20 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
+    // FormSubmit 사용 (정적 사이트 호환)
+    const formSubmitUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL || "https://formsubmit.co/ajax/your-email@example.com";
+    
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(formSubmitUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _subject: `[MediX] ${formData.type} - ${formData.name}`,
+        }),
       });
 
       const data = await response.json();
@@ -57,7 +64,7 @@ export default function ContactForm() {
       } else {
         setSubmitStatus({
           type: "error",
-          message: data.error || "문의 접수에 실패했습니다. 다시 시도해주세요.",
+          message: "문의 접수에 실패했습니다. 다시 시도해주세요.",
         });
       }
     } catch (error) {
