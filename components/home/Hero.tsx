@@ -4,8 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  // SkinCoach 외부 링크 (환경변수로 관리 가능)
-  const skinCoachUrl = process.env.NEXT_PUBLIC_SKINCOACH_URL || "#";
+  // SkinCoach 외부 링크
+  const skinCoachUrl = "https://medix-ai.github.io/skincoach/";
 
   return (
     <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-gray-50">

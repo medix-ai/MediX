@@ -94,7 +94,7 @@ export default function Divisions() {
               </li>
             </ul>
             <a
-              href={process.env.NEXT_PUBLIC_SKINCOACH_URL || "#"}
+              href="https://medix-ai.github.io/skincoach/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-mint text-navy rounded-lg hover:bg-mint-light transition-colors font-semibold"

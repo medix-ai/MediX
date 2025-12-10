@@ -31,9 +31,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/service/skincoach" className="text-gray-300 hover:text-mint transition-colors">
+                <a 
+                  href="https://medix-ai.github.io/skincoach/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-mint transition-colors"
+                >
                   SkinCoach
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-mint transition-colors">

@@ -63,9 +63,14 @@ export default function Navigation() {
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
-                <Link href="/service/skincoach" className="block px-4 py-3 hover:bg-gray-50 rounded-lg">
+                <a 
+                  href="https://medix-ai.github.io/skincoach/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 hover:bg-gray-50 rounded-lg"
+                >
                   SkinCoach
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -146,9 +151,14 @@ export default function Navigation() {
                 </button>
                 {isServiceOpen && (
                   <div className="mt-2 ml-4 space-y-2">
-                    <Link href="/service/skincoach" className="block text-gray-600 hover:text-mint">
+                    <a 
+                      href="https://medix-ai.github.io/skincoach/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-gray-600 hover:text-mint"
+                    >
                       SkinCoach
-                    </Link>
+                    </a>
                   </div>
                 )}
               </div>

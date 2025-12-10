@@ -11,16 +11,13 @@ const contactTypes = [
   "기타 문의",
 ];
 
-const recipientEmails = [
-  "medix.ai.team@gmail.com",
-  "inmani1555@gmail.com",
-];
+// 이메일은 inmani1555@gmail.com로만 전송
+const recipientEmail = "inmani1555@gmail.com";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     type: "",
     name: "",
-    recipientEmail: "",
     organization: "",
     message: "",
   });
@@ -45,7 +42,7 @@ export default function ContactForm() {
 ${formData.message}
     `.trim());
     
-    const mailtoLink = `mailto:${formData.recipientEmail}?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
     
     setSubmitStatus({
@@ -132,23 +129,12 @@ ${formData.message}
               >
                 받는 이메일
               </label>
-              <select
-                id="recipientEmail"
-                value={formData.recipientEmail}
-                onChange={(e) =>
-                  setFormData({ ...formData, recipientEmail: e.target.value })
-                }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
-                required
-                disabled={isSubmitting}
-              >
-                <option value="">선택해주세요</option>
-                {recipientEmails.map((email) => (
-                  <option key={email} value={email}>
-                    {email}
-                  </option>
-                ))}
-              </select>
+              <div className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-600">
+                {recipientEmail}
+              </div>
+              <p className="mt-2 text-xs text-gray-500">
+                문의사항은 위 이메일 주소로 전송됩니다.
+              </p>
             </div>
 
             <div>
