@@ -22,6 +22,7 @@ export default function Navigation() {
               width={120}
               height={40}
               className="object-contain h-8 w-auto"
+              unoptimized
             />
           </Link>
 

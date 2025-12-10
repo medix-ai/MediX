@@ -11,11 +11,16 @@ const contactTypes = [
   "기타 문의",
 ];
 
+const recipientEmails = [
+  "medix.ai.team@gmail.com",
+  "inmani1555@gmail.com",
+];
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     type: "",
     name: "",
-    email: "",
+    recipientEmail: "",
     organization: "",
     message: "",
   });
@@ -30,52 +35,25 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
-    // FormSubmit 사용 (정적 사이트 호환)
-    const formSubmitUrl = process.env.NEXT_PUBLIC_FORMSUBMIT_URL || "https://formsubmit.co/ajax/your-email@example.com";
+    // mailto 링크로 이메일 클라이언트 열기
+    const subject = encodeURIComponent(`[MediX] ${formData.type} - ${formData.name}`);
+    const body = encodeURIComponent(`
+문의 유형: ${formData.type}
+이름: ${formData.name}
+소속 기관/회사: ${formData.organization || "미입력"}
+문의 내용:
+${formData.message}
+    `.trim());
     
-    try {
-      const response = await fetch(formSubmitUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: `[MediX] ${formData.type} - ${formData.name}`,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "문의가 성공적으로 접수되었습니다. 곧 연락드리겠습니다.",
-        });
-        // 폼 초기화
-        setFormData({
-          type: "",
-          name: "",
-          email: "",
-          organization: "",
-          message: "",
-        });
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message: "문의 접수에 실패했습니다. 다시 시도해주세요.",
-        });
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus({
-        type: "error",
-        message: "네트워크 오류가 발생했습니다. 다시 시도해주세요.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const mailtoLink = `mailto:${formData.recipientEmail}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
+    setSubmitStatus({
+      type: "success",
+      message: "이메일 클라이언트가 열렸습니다. 이메일을 확인하고 전송해주세요.",
+    });
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -149,22 +127,28 @@ export default function ContactForm() {
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="recipientEmail"
                 className="block text-sm font-semibold text-navy mb-2"
               >
-                이메일
+                받는 이메일
               </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
+              <select
+                id="recipientEmail"
+                value={formData.recipientEmail}
                 onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
+                  setFormData({ ...formData, recipientEmail: e.target.value })
                 }
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
                 required
                 disabled={isSubmitting}
-              />
+              >
+                <option value="">선택해주세요</option>
+                {recipientEmails.map((email) => (
+                  <option key={email} value={email}>
+                    {email}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>
@@ -211,7 +195,7 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className="w-full px-8 py-4 bg-mint text-navy font-semibold rounded-lg hover:bg-mint-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "전송 중..." : "문의하기"}
+              {isSubmitting ? "전송 중..." : "이메일 보내기"}
             </button>
           </form>
         </motion.div>

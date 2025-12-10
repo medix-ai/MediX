@@ -63,6 +63,7 @@ export default function ProductsGrid() {
                     width={120}
                     height={120}
                     className="object-contain"
+                    unoptimized
                   />
                 </div>
 
