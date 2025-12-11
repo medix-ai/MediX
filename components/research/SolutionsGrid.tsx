@@ -5,11 +5,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const solutions = [
   {
     id: "sonocube",
     title: "SonoCube",
-    logo: "/logos/sono_logo.png",
+    logo: `${basePath}/logos/sono_logo.png`,
     color: "purple",
     subtitle: "2D Ultrasound, Reimagined in 3D",
     desc: "2D 심초음파만으로 3D 심장 구조를 재구성합니다.",
@@ -18,7 +20,7 @@ const solutions = [
   {
     id: "ventriculab",
     title: "VentricuLab",
-    logo: "/logos/ventri_logo.png",
+    logo: `${basePath}/logos/ventri_logo.png`,
     color: "blue",
     subtitle: "EF · Volumes · Scar in 30 Seconds",
     desc: "MRI 기반 자동 분할로 30초 내에 분석을 완료합니다.",
@@ -27,7 +29,7 @@ const solutions = [
   {
     id: "axissight",
     title: "AxisSight",
-    logo: "/logos/axis_logo.png",
+    logo: `${basePath}/logos/axis_logo.png`,
     color: "teal",
     subtitle: "Your Spine, Quantified",
     desc: "X-ray 영상에서 Cobb 각을 자동으로 계산합니다.",

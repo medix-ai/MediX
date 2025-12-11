@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResearchOpen, setIsResearchOpen] = useState(false);
@@ -17,7 +19,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logos/medix_logo.png"
+              src={`${basePath}/logos/medix_logo.png`}
               alt="MediX"
               width={120}
               height={40}
