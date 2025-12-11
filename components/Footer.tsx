@@ -11,8 +11,16 @@ export default function Footer() {
             <p className="text-gray-300 mb-4 max-w-md">
               의료와 일상을 연결하는 정량화 중심 AI 기업
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 mb-2">
               Research × Clinical AI × Consumer AI
+            </p>
+            <p className="text-sm text-gray-300">
+              <a 
+                href="mailto:medix.ai.team@gmail.com" 
+                className="hover:text-mint transition-colors"
+              >
+                medix.ai.team@gmail.com
+              </a>
             </p>
           </div>
 

@@ -124,21 +124,6 @@ ${formData.message}
 
             <div>
               <label
-                htmlFor="recipientEmail"
-                className="block text-sm font-semibold text-navy mb-2"
-              >
-                받는 이메일
-              </label>
-              <div className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-600">
-                {recipientEmail}
-              </div>
-              <p className="mt-2 text-xs text-gray-500">
-                문의사항은 위 이메일 주소로 전송됩니다.
-              </p>
-            </div>
-
-            <div>
-              <label
                 htmlFor="organization"
                 className="block text-sm font-semibold text-navy mb-2"
               >
