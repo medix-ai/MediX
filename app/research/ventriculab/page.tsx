@@ -5,6 +5,7 @@ const content = {
     title: "EF · Volumes · Scar — in 30 Seconds.",
     subtitle: "VentricuLab",
   },
+  demoImage: "/images/ventri_main.png",
   problem: {
     title: "Problem",
     content: "MRI 심장 분석은 수동 작업이 많고 시간이 오래 걸립니다.",

@@ -5,6 +5,7 @@ const content = {
     title: "2D Ultrasound, Reimagined in 3D.",
     subtitle: "SonoCube",
   },
+  demoImage: "/images/sono_main.png",
   problem: {
     title: "Problem",
     content: "2D 심초음파는 관찰자 편차가 크고 3D 장비는 고가·폐쇄형입니다.",

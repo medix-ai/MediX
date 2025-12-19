@@ -5,6 +5,7 @@ const content = {
     title: "Your Spine, Quantified.",
     subtitle: "AxisSight",
   },
+  demoImage: "/images/axis_main.png",
   problem: {
     title: "Problem",
     content: "척추 X-ray Cobb 각 측정은 수동이며 관찰자 간 편차가 큽니다.",

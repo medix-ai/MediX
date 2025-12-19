@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface SolutionLayoutProps {
@@ -8,6 +9,7 @@ interface SolutionLayoutProps {
     title: string;
     subtitle: string;
   };
+  demoImage?: string;
   problem: {
     title: string;
     content: string;
@@ -32,12 +34,15 @@ interface SolutionLayoutProps {
 
 export default function SolutionLayout({
   hero,
+  demoImage,
   problem,
   solution,
   mvp,
   roadmap,
   value,
 }: SolutionLayoutProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="pt-32 pb-20">
       {/* Hero Section */}
@@ -57,14 +62,29 @@ export default function SolutionLayout({
         </div>
       </section>
 
-      {/* Demo Placeholder */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl aspect-video flex items-center justify-center">
-            <span className="text-gray-500 text-lg">데모 영상 영역</span>
+      {/* Demo Image Section */}
+      {demoImage && (
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src={`${basePath}${demoImage}`}
+                alt={`${hero.subtitle} 메인 이미지`}
+                width={1920}
+                height={1080}
+                className="w-full h-auto object-cover"
+                unoptimized
+              />
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Problem Section */}
       <section className="py-16 bg-white">

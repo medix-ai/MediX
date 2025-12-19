@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Microscope, Sparkles } from "lucide-react";
 
 export default function Divisions() {
   return (
@@ -33,7 +34,7 @@ export default function Divisions() {
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl emoji">💙</span>
+                <Microscope className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-navy">Research Division</h3>
             </div>
@@ -72,7 +73,7 @@ export default function Divisions() {
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl emoji">💜</span>
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-navy">Service Division</h3>
             </div>

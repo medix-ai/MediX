@@ -29,7 +29,7 @@ export default function History() {
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
             History & Achievements
           </h2>
-          <p className="text-xl text-gray-600">회사 역사 및 주요 성과 타임라인</p>
+          <p className="text-xl text-gray-600">팀 역사 및 주요 성과 타임라인</p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">

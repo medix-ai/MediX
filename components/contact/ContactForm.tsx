@@ -89,7 +89,7 @@ ${formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, type: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
+                className="w-full px-4 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
                 required
                 disabled={isSubmitting}
               >
@@ -116,7 +116,7 @@ ${formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
+                className="w-full px-4 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
                 required
                 disabled={isSubmitting}
               />
@@ -136,7 +136,7 @@ ${formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, organization: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
+                className="w-full px-4 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
                 disabled={isSubmitting}
               />
             </div>
@@ -155,7 +155,7 @@ ${formData.message}
                   setFormData({ ...formData, message: e.target.value })
                 }
                 rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
+                className="w-full px-4 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mint focus:border-transparent"
                 required
                 disabled={isSubmitting}
               />
