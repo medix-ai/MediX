@@ -32,9 +32,9 @@ export default function Philosophy() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">MediX의 철학</h2>
-          <blockquote className="text-2xl md:text-3xl text-gray-700 italic font-light max-w-3xl mx-auto">
-            &ldquo;정확성·일관성·임상 신뢰를 기반으로 하는 실전형 AI 기업&rdquo;
-          </blockquote>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            정확성·일관성·임상 신뢰를 기반으로 하는 실전형 AI 기업
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

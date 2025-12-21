@@ -39,22 +39,13 @@ export default function Divisions() {
               <h3 className="text-2xl font-bold text-navy">Research Division</h3>
             </div>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              정량화·시각화·일관성을 핵심으로 하는 <strong>심장·척추 의료 AI 연구팀</strong>
+              정량화·시각화·일관성을 핵심으로 하는 <strong>심장 의료 AI 연구팀</strong>
             </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700"><strong>SonoCube:</strong> 2D 심초음파 → 3D·EF 자동화</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700"><strong>VentricuLab:</strong> MRI EF·Volumes·Scar 자동 분석</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700"><strong>AxisSight:</strong> X-ray Cobb 자동 계측</span>
-              </li>
-            </ul>
+            <div className="mb-6 p-4 bg-white/50 rounded-lg">
+              <p className="text-gray-700">
+                <strong className="text-navy">SonoCube</strong> - 2D 심초음파만으로 3D 심장 구조 재구성 및 EF 자동 계산
+              </p>
+            </div>
             <Link
               href="/research"
               className="inline-block px-6 py-3 bg-navy text-white rounded-lg hover:bg-navy-light transition-colors font-semibold"
@@ -80,20 +71,11 @@ export default function Divisions() {
             <p className="text-gray-700 mb-6 leading-relaxed">
               AI가 사용자 개인의 피부 정보를 해석하고 최적 루틴을 설계하는 <strong>SkinCoach</strong>
             </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700">성분 분석 기반 맞춤 루틴</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700">위험 성분 조합 자동 경고</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-mint mr-2">•</span>
-                <span className="text-gray-700">예산 기반 최적화 제품 추천</span>
-              </li>
-            </ul>
+            <div className="mb-6 p-4 bg-white/50 rounded-lg">
+              <p className="text-gray-700">
+                성분 분석 기반 맞춤 루틴 · 위험 성분 조합 자동 경고 · 예산 기반 최적화 제품 추천
+              </p>
+            </div>
             <a
               href="https://medix-ai.github.io/skincoach/"
               target="_blank"

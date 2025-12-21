@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const resources = [
   {
     title: "데모 영상",
-    description: "SonoCube, VentricuLab, AxisSight 실제 작동 데모",
+    description: "SonoCube 실제 작동 데모",
     icon: "🎥",
   },
   {

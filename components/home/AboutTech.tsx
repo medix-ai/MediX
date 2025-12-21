@@ -16,14 +16,12 @@ export default function AboutTech() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              About our
-              <br />
-              Technology
+              MediX의 기술 철학
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-            정확도(Accuracy), 일관성(Consistency), 실전 배포(Deployment). <br />
-            MediX는 이 세 요소가 균형을 이루어야 진짜 의미 있는 의료 AI가 된다고 믿습니다. <br />
-            그래서 우리는 연구실 성능과 임상적 신뢰성, 실제 사용성을 동시에 추구합니다. <br />
+            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+              정확도(Accuracy), 일관성(Consistency), 실전 배포(Deployment).<br />
+              MediX는 이 세 요소가 균형을 이루어야 진짜 의미 있는 의료 AI가 된다고 믿습니다.<br />
+              그래서 우리는 연구실 성능과 임상적 신뢰성, 실제 사용성을 동시에 추구합니다.
             </p>
             <Link
               href="/about"

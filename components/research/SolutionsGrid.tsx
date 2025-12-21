@@ -17,31 +17,13 @@ const solutions = [
     desc: "2D 심초음파만으로 3D 심장 구조를 재구성합니다.",
     href: "/research/sonocube",
   },
-  {
-    id: "ventriculab",
-    title: "VentricuLab",
-    logo: `${basePath}/logos/ventri_logo.png`,
-    color: "blue",
-    subtitle: "EF · Volumes · Scar in 30 Seconds",
-    desc: "MRI 기반 자동 분할로 30초 내에 분석을 완료합니다.",
-    href: "/research/ventriculab",
-  },
-  {
-    id: "axissight",
-    title: "AxisSight",
-    logo: `${basePath}/logos/axis_logo.png`,
-    color: "teal",
-    subtitle: "Your Spine, Quantified",
-    desc: "X-ray 영상에서 Cobb 각을 자동으로 계산합니다.",
-    href: "/research/axissight",
-  },
 ];
 
 export default function SolutionsGrid() {
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-1 gap-6 max-w-md mx-auto">
           {solutions.map((solution) => {
             return (
               <motion.div

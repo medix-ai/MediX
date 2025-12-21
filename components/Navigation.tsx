@@ -45,14 +45,8 @@ export default function Navigation() {
                 <Link href="/research" className="block px-4 py-3 hover:bg-gray-50 rounded-t-lg">
                   Overview
                 </Link>
-                <Link href="/research/sonocube" className="block px-4 py-3 hover:bg-gray-50">
+                <Link href="/research/sonocube" className="block px-4 py-3 hover:bg-gray-50 rounded-b-lg">
                   SonoCube
-                </Link>
-                <Link href="/research/ventriculab" className="block px-4 py-3 hover:bg-gray-50">
-                  VentricuLab
-                </Link>
-                <Link href="/research/axissight" className="block px-4 py-3 hover:bg-gray-50 rounded-b-lg">
-                  AxisSight
                 </Link>
               </div>
             </div>
@@ -131,12 +125,6 @@ export default function Navigation() {
                     </Link>
                     <Link href="/research/sonocube" className="block text-gray-600 hover:text-mint">
                       SonoCube
-                    </Link>
-                    <Link href="/research/ventriculab" className="block text-gray-600 hover:text-mint">
-                      VentricuLab
-                    </Link>
-                    <Link href="/research/axissight" className="block text-gray-600 hover:text-mint">
-                      AxisSight
                     </Link>
                   </div>
                 )}
