@@ -17,6 +17,9 @@ export default function Team() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">Team.MediX</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+            AI 전공 4학년 대표와 의학과 4학년 팀원이 함께하고 있습니다.
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
